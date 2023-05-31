@@ -1,0 +1,714 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{10600CAB-3965-4C54-BA35-EC1137BE4310}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ERP.My.MyApplication</StartupObject>
+    <RootNamespace>ERP</RootNamespace>
+    <AssemblyName>ERP</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ERP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ERP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Attunity.SqlServer.CDCControlTask, Version=1.0.0.0, Culture=neutral, PublicKeyToken=aa342389a732e31c, processorArchitecture=MSIL" />
+    <Reference Include="Attunity.SqlServer.CDCSplit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=aa342389a732e31c, processorArchitecture=MSIL" />
+    <Reference Include="Attunity.SqlServer.CDCSrc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=aa342389a732e31c, processorArchitecture=MSIL" />
+    <Reference Include="CppCodeProvider, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="CRVsPackageLib, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.TemplateEngine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Viewing.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CustomMarshalers" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="FSharp.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Microsoft.Synchronization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Synchronization.Files, Version=1.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Synchronization.MetadataStorage, Version=1.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility.Data" />
+    <Reference Include="Microsoft.VisualC" />
+    <Reference Include="PresentationBuildTasks">
+      <HintPath>C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationBuildTasks.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="PresentationFramework.Classic" />
+    <Reference Include="PresentationFramework.Luna" />
+    <Reference Include="PresentationFramework.Royale" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="sysglobl" />
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Activities.Core.Presentation" />
+    <Reference Include="System.Activities.DurableInstancing" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.Addin" />
+    <Reference Include="System.Addin.Contract" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Data.SqlXml" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Device" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Selectors" />
+    <Reference Include="System.IO.Log" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Instrumentation" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.DurableInstancing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activities" />
+    <Reference Include="System.ServiceModel.Channels" />
+    <Reference Include="System.ServiceModel.Discovery" />
+    <Reference Include="System.ServiceModel.Routing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Input.Manipulations" />
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationClientsideProviders" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bin\Debug\Reports\RptDyingHouseInward.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptDyingHouseInward.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\Reports\RptstockTransfernew.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptstockTransfernew.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="clsPrint.vb" />
+    <Compile Include="Department\FrmDepartmentRowIssue.Designer.vb">
+      <DependentUpon>FrmDepartmentRowIssue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Department\FrmDepartmentRowIssue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Department\FrmDepartmentRowReturn.Designer.vb">
+      <DependentUpon>FrmDepartmentRowReturn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Department\FrmDepartmentRowReturn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Department\FrmDepartmentRowReturnReceice.Designer.vb">
+      <DependentUpon>FrmDepartmentRowReturnReceice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Department\FrmDepartmentRowReturnReceice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Department\FrmDepartmentRowReceive.Designer.vb">
+      <DependentUpon>FrmDepartmentRowReceive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Department\FrmDepartmentRowReceive.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCrystal.Designer.vb">
+      <DependentUpon>FrmCrystal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCrystal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGeneralGateIn.Designer.vb">
+      <DependentUpon>FrmGeneralGateIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGeneralGateIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGeneralGatePass.Designer.vb">
+      <DependentUpon>FrmGeneralGatePass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGeneralGatePass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmindentrowissue.Designer.vb">
+      <DependentUpon>frmindentrowissue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmindentrowissue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRawMaterialIssueforOthers.designer.vb">
+      <DependentUpon>FrmRawMaterialIssueforOthers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRawMaterialIssueforOthers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRecipeRawMaterialIssue.Designer.vb">
+      <DependentUpon>FrmRecipeRawMaterialIssue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRecipeRawMaterialIssue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsamplerawissue.Designer.vb">
+      <DependentUpon>frmsamplerawissue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmsamplerawissue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStockNoAttachWeight.Designer.vb">
+      <DependentUpon>frmStockNoAttachWeight.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStockNoAttachWeight.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStockTransfer.Designer.vb">
+      <DependentUpon>FrmStockTransfer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStockTransfer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmindentrawreceive.Designer.vb">
+      <DependentUpon>frmindentrawreceive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmindentrawreceive.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIndentRawReturn.Designer.vb">
+      <DependentUpon>FrmIndentRawReturn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIndentRawReturn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDyingHouseInward.Designer.vb">
+      <DependentUpon>FrmDyingHouseInward.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDyingHouseInward.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.vb">
+      <DependentUpon>FrmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmmaterialissuestocknowise.Designer.vb">
+      <DependentUpon>frmmaterialissuestocknowise.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmmaterialissuestocknowise.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmprocessrawreceive.Designer.vb">
+      <DependentUpon>Frmprocessrawreceive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frmprocessrawreceive.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmpurchasereceive.Designer.vb">
+      <DependentUpon>frmpurchasereceive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmpurchasereceive.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRawMaterialIssue.Designer.vb">
+      <DependentUpon>FrmRawMaterialIssue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRawMaterialIssue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBazaarWeightUpdate.Designer.vb">
+      <DependentUpon>FrmBazaarWeightUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBazaarWeightUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRawMaterialReturned.Designer.vb">
+      <DependentUpon>frmRawMaterialReturned.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRawMaterialReturned.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsampledyeingmaterialreceive.designer.vb">
+      <DependentUpon>frmsampledyeingmaterialreceive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmsampledyeingmaterialreceive.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTasselMakingOrderRowIssueNew.Designer.vb">
+      <DependentUpon>FrmTasselMakingOrderRowIssueNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTasselMakingOrderRowIssueNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsampleyarndyeing.designer.vb">
+      <DependentUpon>frmsampleyarndyeing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmsampleyarndyeing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserAuth.designer.vb">
+      <DependentUpon>frmUserAuth.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserAuth.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hand Spinning\frmHandspinningissue.Designer.vb">
+      <DependentUpon>frmHandspinningissue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hand Spinning\frmHandspinningissue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hand Spinning\frmHandspinningreceive.Designer.vb">
+      <DependentUpon>frmHandspinningreceive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hand Spinning\frmHandspinningreceive.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hand Spinning\frmHandspinningreturn.Designer.vb">
+      <DependentUpon>frmHandspinningreturn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hand Spinning\frmHandspinningreturn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeFurnishing\FrmHomeFurnishingProductionOrderRowIssue.Designer.vb">
+      <DependentUpon>FrmHomeFurnishingProductionOrderRowIssue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomeFurnishing\FrmHomeFurnishingProductionOrderRowIssue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="Motteling\frmmottelingissue.designer.vb">
+      <DependentUpon>frmmottelingissue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Motteling\frmmottelingissue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Motteling\frmmottelingreceive.designer.vb">
+      <DependentUpon>frmmottelingreceive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Motteling\frmmottelingreceive.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Motteling\frmmottelingreturn.Designer.vb">
+      <DependentUpon>frmmottelingreturn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Motteling\frmmottelingreturn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Process\FrmNextProcessIssue.designer.vb">
+      <DependentUpon>FrmNextProcessIssue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Process\FrmNextProcessIssue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Process\FrmNextProcessReceive.designer.vb">
+      <DependentUpon>FrmNextProcessReceive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Process\FrmNextProcessReceive.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Process\FrmFirstProcessReceive.Designer.vb">
+      <DependentUpon>FrmFirstProcessReceive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Process\FrmFirstProcessReceive.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQLHelper.vb" />
+    <Compile Include="YarnOpening\frmyarnopeningissue.Designer.vb">
+      <DependentUpon>frmyarnopeningissue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="YarnOpening\frmyarnopeningissue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YarnOpening\frmyarnopeningreceive.Designer.vb">
+      <DependentUpon>frmyarnopeningreceive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="YarnOpening\frmyarnopeningreceive.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YarnOpening\frmyarnopeningreturn.Designer.vb">
+      <DependentUpon>frmyarnopeningreturn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="YarnOpening\frmyarnopeningreturn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="bin\Debug\Reports\RptDyingHouseInward.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptDyingHouseInward.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\Reports\RptstockTransfernew.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptstockTransfernew.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Department\FrmDepartmentRowIssue.resx">
+      <DependentUpon>FrmDepartmentRowIssue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Department\FrmDepartmentRowReturn.resx">
+      <DependentUpon>FrmDepartmentRowReturn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Department\FrmDepartmentRowReturnReceice.resx">
+      <DependentUpon>FrmDepartmentRowReturnReceice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Department\FrmDepartmentRowReceive.resx">
+      <DependentUpon>FrmDepartmentRowReceive.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ERP.FrmRawMaterialIssueforOthers.resources" />
+    <EmbeddedResource Include="FrmCrystal.resx">
+      <DependentUpon>FrmCrystal.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGeneralGateIn.resx">
+      <DependentUpon>FrmGeneralGateIn.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGeneralGatePass.resx">
+      <DependentUpon>FrmGeneralGatePass.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmindentrowissue.resx">
+      <DependentUpon>frmindentrowissue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRawMaterialIssueforOthers.resx">
+      <DependentUpon>FrmRawMaterialIssueforOthers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRecipeRawMaterialIssue.resx">
+      <DependentUpon>FrmRecipeRawMaterialIssue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsamplerawissue.resx">
+      <DependentUpon>frmsamplerawissue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStockNoAttachWeight.resx">
+      <DependentUpon>frmStockNoAttachWeight.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStockTransfer.resx">
+      <DependentUpon>FrmStockTransfer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmindentrawreceive.resx">
+      <DependentUpon>frmindentrawreceive.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIndentRawReturn.resx">
+      <DependentUpon>FrmIndentRawReturn.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDyingHouseInward.resx">
+      <DependentUpon>FrmDyingHouseInward.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmmaterialissuestocknowise.resx">
+      <DependentUpon>frmmaterialissuestocknowise.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmprocessrawreceive.resx">
+      <DependentUpon>Frmprocessrawreceive.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmpurchasereceive.resx">
+      <DependentUpon>frmpurchasereceive.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRawMaterialIssue.resx">
+      <DependentUpon>FrmRawMaterialIssue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBazaarWeightUpdate.resx">
+      <DependentUpon>FrmBazaarWeightUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRawMaterialReturned.resx">
+      <DependentUpon>frmRawMaterialReturned.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsampledyeingmaterialreceive.resx">
+      <DependentUpon>frmsampledyeingmaterialreceive.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTasselMakingOrderRowIssueNew.resx">
+      <DependentUpon>FrmTasselMakingOrderRowIssueNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsampleyarndyeing.resx">
+      <DependentUpon>frmsampleyarndyeing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserAuth.resx">
+      <DependentUpon>frmUserAuth.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hand Spinning\frmHandspinningissue.resx">
+      <DependentUpon>frmHandspinningissue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hand Spinning\frmHandspinningreceive.resx">
+      <DependentUpon>frmHandspinningreceive.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hand Spinning\frmHandspinningreturn.resx">
+      <DependentUpon>frmHandspinningreturn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeFurnishing\FrmHomeFurnishingProductionOrderRowIssue.resx">
+      <DependentUpon>FrmHomeFurnishingProductionOrderRowIssue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Motteling\frmmottelingissue.resx">
+      <DependentUpon>frmmottelingissue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Motteling\frmmottelingreceive.resx">
+      <DependentUpon>frmmottelingreceive.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Motteling\frmmottelingreturn.resx">
+      <DependentUpon>frmmottelingreturn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\FrmNextProcessIssue.resx">
+      <DependentUpon>FrmNextProcessIssue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\FrmNextProcessReceive.resx">
+      <DependentUpon>FrmNextProcessReceive.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process\FrmFirstProcessReceive.resx">
+      <DependentUpon>FrmFirstProcessReceive.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YarnOpening\frmyarnopeningissue.resx">
+      <DependentUpon>frmyarnopeningissue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YarnOpening\frmyarnopeningreceive.resx">
+      <DependentUpon>frmyarnopeningreceive.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YarnOpening\frmyarnopeningreturn.resx">
+      <DependentUpon>frmyarnopeningreturn.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AccessibilityCplAdminLib">
+      <Guid>{714DD4F6-7676-4BDE-925A-C2FEC2073F36}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\ReportSchema\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
