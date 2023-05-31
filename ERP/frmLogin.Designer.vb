@@ -8,6 +8,12 @@ Partial Class FrmLogin
         If disposing AndAlso components IsNot Nothing Then
             components.Dispose()
         End If
+
+
+
+
+
+
         MyBase.Dispose(disposing)
     End Sub
 
